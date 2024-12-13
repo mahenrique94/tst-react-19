@@ -5,3 +5,8 @@
 .grid {
   margin-top: 2rem;
 }
+
+.grid-col {
+  display: flex;
+  flex-direction: column;
+}
