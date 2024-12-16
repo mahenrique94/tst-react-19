@@ -11,7 +11,7 @@ import { UseTransition } from "./routes/UseTransition";
 import { Use } from "./routes/Use";
 
 export const Routes = () => (
-  <BrowserRouter basename="/tst-react-19">
+  <BrowserRouter>
     <RRRoutes>
       <Route element={<App />} path="/">
         <Route element={<Home />} index />

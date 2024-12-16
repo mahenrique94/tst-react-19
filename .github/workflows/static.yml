@@ -38,7 +38,11 @@ jobs:
       - name: Installing dependencies
         run: npm ci
       - name: Building app
+        env:
+          REPO_NAME: ${{ github.repository }}
         run: npm run build
+      - name: Creating 404 fallback page
+        run: cp ./dist/index.html ./dist/404.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
