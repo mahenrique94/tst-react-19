@@ -1,10 +1,15 @@
-import { BrowserRouter, Outlet, Routes as RRRoutes, Route } from "react-router";
+import {
+  BrowserRouter,
+  Navigate,
+  Outlet,
+  Routes as RRRoutes,
+  Route,
+} from "react-router";
 
 import { App } from "./layouts/App";
 import { CustomElements } from "./routes/CustomElements";
 import { FormActions } from "./routes/FormActions";
 import { Home } from "./routes/Home";
-import { NotFound } from "./routes/NotFound";
 import { UseActionState } from "./routes/UseActionState";
 import { UseOptimistic } from "./routes/UseOptimistic";
 import { UseTransition } from "./routes/UseTransition";
@@ -23,7 +28,7 @@ export const Routes = () => (
           <Route element={<UseTransition />} path="transition" />
         </Route>
         <Route element={<FormActions />} path="form-actions" />
-        <Route element={<NotFound />} path="*" />
+        <Route element={<Navigate replace to="/" />} path="*" />
       </Route>
     </RRRoutes>
   </BrowserRouter>
