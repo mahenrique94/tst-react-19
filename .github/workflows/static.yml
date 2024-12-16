@@ -36,9 +36,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
       - name: Installing dependencies
-        uses: npm ci
+        run: npm ci
       - name: Building app
-        uses: npm run build
+        run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
